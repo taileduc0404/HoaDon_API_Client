@@ -1,0 +1,10 @@
+﻿<Application x:Class="HoaDon_API_Client.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HoaDon_API_Client"
+             xmlns:localVm="clr-namespace:HoaDon_API_Client.Models"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <localVm:HangHoa x:Key="rsHangHoa"/>
+    </Application.Resources>
+</Application>

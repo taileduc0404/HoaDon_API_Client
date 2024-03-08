@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoaDon_API_Client", "HoaDon_API_Client\HoaDon_API_Client.csproj", "{A4EBF1E0-EEF1-4277-A630-05CEB3009B80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4EBF1E0-EEF1-4277-A630-05CEB3009B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EBF1E0-EEF1-4277-A630-05CEB3009B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EBF1E0-EEF1-4277-A630-05CEB3009B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EBF1E0-EEF1-4277-A630-05CEB3009B80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46313C99-8CA0-4E06-85E7-9D5A7B0F5D92}
+	EndGlobalSection
+EndGlobal
