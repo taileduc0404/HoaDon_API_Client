@@ -33,8 +33,8 @@ namespace HoaDon_API_Client
 
         private void hoadon_Click(object sender, RoutedEventArgs e)
         {
-            //UI.HoaDonWindow hoadon = new UI.HoaDonWindow();
-            //hoadon.Show();
+            UI.HoaDonWindows hoadon = new UI.HoaDonWindows();
+            hoadon.Show();
         }
     }
 }
