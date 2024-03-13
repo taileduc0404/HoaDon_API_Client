@@ -7,6 +7,17 @@
         xmlns:localVM="clr-namespace:HoaDon_API_Client.Models"
         mc:Ignorable="d"
         Title="HangHoaWindow" Height="450" Width="800" Loaded="Window_Load">
+    <Window.CommandBindings>
+        <CommandBinding Command="localVM:MyCommands.lenhThem" x:Name="lenhThem"
+                        Executed="lenhThem_Executed" 
+                        CanExecute="lenhThem_CanExecute"/>
+        <CommandBinding Command="localVM:MyCommands.lenhXoa" x:Name="lenhXoa"
+                        Executed="lenhXoa_Executed" 
+                        CanExecute="lenhXoa_CanExecute"/>
+        <CommandBinding Command="localVM:MyCommands.lenhSua" x:Name="lenhSua"
+                        Executed="lenhSua_Executed" 
+                        CanExecute="lenhSua_CanExecute"/>
+    </Window.CommandBindings>
     <StackPanel>
         <Label Content="Quản lý hàng hóa"></Label>
         <Grid x:Name="gridHangHoa" DataContext="{StaticResource rsHangHoa}">
@@ -35,9 +46,9 @@
             <TextBox Margin="3" Grid.Row="2" Grid.Column="2" Text="{Binding Dvt}"/>
             <TextBox Margin="3" Grid.Row="3" Grid.Column="2" Text="{Binding Dongia}"/>
 
-            <Button Margin="3" Grid.Row="1" Grid.Column="4" Content="Thêm" />
-            <Button Margin="3" Grid.Row="2" Grid.Column="4" Content="Xóa" />
-            <Button Margin="3" Grid.Row="3" Grid.Column="4" Content="Sửa"/>
+            <Button Margin="3" Grid.Row="1" Grid.Column="4" Content="Thêm" Command="localVM:MyCommands.lenhThem"/>
+            <Button Margin="3" Grid.Row="2" Grid.Column="4" Content="Xóa" Command="localVM:MyCommands.lenhXoa"/>
+            <Button Margin="3" Grid.Row="3" Grid.Column="4" Content="Sửa" Command="localVM:MyCommands.lenhSua"/>
         </Grid>
         <Label Content="Danh sách hàng hóa" Margin="3" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
         <DataGrid Margin="3" x:Name="dgHangHoa" AutoGenerateColumns="False" SelectedValuePath="Mahang" SelectionChanged="dgHangHoa_SelectionChanged">

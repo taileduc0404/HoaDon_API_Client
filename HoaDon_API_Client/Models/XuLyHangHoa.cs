@@ -36,7 +36,57 @@ namespace HoaDon_API_Client.Models
                 throw new Exception(e.Message);
             }
         }
+		public static bool ThemHangHoa(HangHoa hangHoa)
+		{
+			try
+			{
+				HttpClient client = new HttpClient();
+				string url = @"https://localhost:44300/api/HangHoa/Create";
+                var connect = client.PostAsJsonAsync<HangHoa>(url, hangHoa);
+				connect.Wait();
+                return connect.Result.IsSuccessStatusCode;
+
+			}
+			catch (Exception)
+			{
+                return false;
+			}
+		}
+		public static bool XoaHangHoa(string mahang)
+		{
+			try
+			{
+				HttpClient client = new HttpClient();
+				string url = @"https://localhost:44300/api/HangHoa/Delete?id=" + mahang;
+				var connect = client.DeleteAsync(url);
+				connect.Wait();
+				return connect.Result.IsSuccessStatusCode;
+
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
+
+		public static bool SuaHangHoa(HangHoa hh)
+		{
+			try
+			{
+				HttpClient client = new HttpClient();
+				string url = @"https://localhost:44300/api/HangHoa/Update?mahang=" + hh.Mahang;
+				
+				var connect = client.PutAsJsonAsync<HangHoa>(url,hh);
+				connect.Wait();
+				return connect.Result.IsSuccessStatusCode;
+
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
 
 
-    }
+	}
 }
